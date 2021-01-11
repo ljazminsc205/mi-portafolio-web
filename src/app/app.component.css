@@ -74,6 +74,7 @@
     width: 100%; 
     display: flex;
     justify-content: flex-end; 
+    border-radius: 15px ;
 }
 
 .btn:hover{
