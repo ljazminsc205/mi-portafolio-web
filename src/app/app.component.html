@@ -1,90 +1,93 @@
 <div class="contMain">
     <div class="contInside"></div>
 </div>
-<div class="containerCards">
-    <!-- <div class="card" *ngFor="let item of rutas">
-        <div class="imagen"></div>
-        <div class="title">
-            <a href={{item.ruta}}>{{item.name}} </a>
+<div class="contCrd">
+<p class="titulo">Mi portafolio Web</p>
+    <div class="containerCards">
+        <!-- <div class="card" *ngFor="let item of rutas">
+            <div class="imagen"></div>
+            <div class="title">
+                <a href={{item.ruta}}>{{item.name}} </a>
+            </div>
+            <div class="text">
+            </div>
+        </div>  -->
+        <!--Carousel Wrapper-->
+
+        <div class="chev-cont">
+            <h1 href="#multi-item-example" data-slide="prev">
+                <img class="chev" src="../assets/chevron-apuntando-a-la-izquierda.png" alt="">
+            </h1>
         </div>
-        <div class="text">
-        </div>
-    </div>  -->
-    <!--Carousel Wrapper-->
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-   <div class="chev-cont">
-    <h1 href="#multi-item-example" data-slide="prev">
-        <img class="chev" src="../assets/chevron-apuntando-a-la-izquierda.png" alt="">
-    </h1> 
-    
-   </div>
-    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+            <!--Controls-->
+            <div class="controls-top">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                        class="fas fa-chevron-left"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+            <!--/.Controls-->
 
-        <!--Controls-->
-        <div class="controls-top">
-            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                    class="fas fa-chevron-right"></i></a>
-        </div>
-        <!--/.Controls-->
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+            </ol>
+            <!--/.Indicators-->
 
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-            <li data-target="#multi-item-example" data-slide-to="1"></li>
-        </ol>
-        <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
 
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item active">
-                <div *ngFor="let item of rutas" class="col-md-4" style="float:left">
-                    <div class="card mb-2">
-                        <img class="imagen" src={{item.img}} alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title"> {{item.name}} </h4>
-                            <p class="card-text">Some quick example text to build on th...</p>
-                            <div class="btnVisit">
-                                <a class="btn" href={{item.ruta}}>Visitar</a>
+                <!--First slide-->
+                <div class="carousel-item active ">
+                    <div *ngFor="let item of rutas" class="col-md-4" style="float:left ; padding: 10px;">
+                        <div class="card mb-2" style=" width: 95%; height: 25%;" >
+                            <img class="imagen" src={{item.img}} alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title" style="text-align: start;" > {{item.name}} </h4>
+                                <p class="card-text" style="text-align: start;" > {{item.description}} </p>
+                                <div class="btnVisit">
+                                    <a class="btn" href={{item.ruta}}>Visitar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--/.First slide-->
+                <!--/.First slide-->
 
-            <!--Second slide-->
-            <div class="carousel-item">
+                <!--Second slide-->
+                <div class="carousel-item">
 
-                <div *ngFor="let item of rutas2" class="col-md-4" style="float:left">
-                    <div class="card mb-2">
-                        <img class="card-img-top" src={{item.img}} alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title"> {{item.name}} </h4>
-                            <p class="card-text">Some quick example text to build on the card title....</p>
-                            <div class="btnVisit">
-                                <a class="btn" href={{item.ruta}}>Visitar</a>
+                    <div *ngFor="let item of rutas2" class="col-md-4" style="float:left ; padding: 10px;">
+                        <div class="card mb-2" style=" width: 95%; height: 25%;" >
+                            <img class="card-img-top" src={{item.img}} alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title" style="text-align: start;" > {{item.name}} </h4>
+                                <p class="card-text" style="text-align: start;" > {{item.description}} </p>
+                                <div class="btnVisit">
+                                    <a class="btn" href={{item.ruta}}>Visitar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <!--/.Second slide-->
 
             </div>
-            <!--/.Second slide-->
-
+            <!--/.Slides-->
         </div>
-        <!--/.Slides-->
-    </div>
 
-    <div class="chev-cont">
-        <h1 href="#multi-item-example" data-slide="next">
-            <img class="chev" src="../assets/chevron-derecho.png" alt="">
-        </h1> 
-    </div>
-    <!--/.Carousel Wrapper-->
+        <div class="chev-cont">
+            <h1 href="#multi-item-example" data-slide="next">
+                <img class="chev" src="../assets/chevron-derecho.png" alt="">
+            </h1>
+        </div>
+        <!--/.Carousel Wrapper-->
 
+    </div>
 </div>
 
 
