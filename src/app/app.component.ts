@@ -9,10 +9,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'my-app';
-  rutas = [{ name: 'Card', ruta: 'https://card-flip-30aba.web.app/' },
-    { name: 'Portafolio', ruta: 'https://mi-portafolio-web.web.app/' },
-    { name: 'Back', ruta: 'https://background-float.web.app/' },
-    { name: 'Notas', ruta: 'https://notas-f5bbc.web.app/home' },
-    { name: 'Cronometro', ruta: 'https://cronometro-8fe15.web.app/home' }
-  ]
+  rutas = [ 
+      { name: 'Notas', ruta: 'https://notas-f5bbc.web.app/home' , img:'../assets/notas.png' },
+      { name: 'Cronometro', ruta: 'https://cronometro-8fe15.web.app/home', img:'../assets/cronometro.png' },
+      { name: 'Bizquick', ruta: 'https://ehs-institute.web.app/' , img:'../assets/renase.png' }
+   ]
+  rutas2=[
+      { name: 'Cards', ruta: 'https://card-flip-30aba.web.app/', img:'../assets/cards.png' },
+      { name: 'Curso Introducción al Desarrollo de páginas Web', ruta: 'https://mi-portafolio-web.web.app/', img:'../assets/miportafolio.png' },
+      { name: 'Background flotante', ruta: 'https://background-float.web.app/' ,img:'../assets/back.png' }
+    ]
+  
 }
